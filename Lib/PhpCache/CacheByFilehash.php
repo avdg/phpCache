@@ -94,7 +94,8 @@ class CacheByFileHash
     public function getConfig($option)
     {
         if (is_string($option)) {
-            if ($option == 'cacheDirectory') {
+            switch($option) {
+            case 'cacheDirectory':
                 if (!isset($this->cacheDirectory)) {
                     return false;
                 }
