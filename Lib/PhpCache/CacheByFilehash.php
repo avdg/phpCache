@@ -85,7 +85,7 @@ class CacheByFileHash
     /**
      * Get a configuration setting, false if option not found
      *
-     * @param string Options to get
+     * @param string $option Options to get
      *
      * @return mixed
      *
