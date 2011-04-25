@@ -13,7 +13,7 @@ class CacheFilehashTest extends PHPUnit_Framework_TestCase
     public function setUp()
     {
         $this->_cache = new CacheByFileHash();
-        $this->_path   = dirname(__FILE__) . '/../_mocks';
+        $this->_path  = dirname(__FILE__) . '/../_mocks';
 
         $this->_dir = array(
             'cache'                => $this->_path . '/cache',
