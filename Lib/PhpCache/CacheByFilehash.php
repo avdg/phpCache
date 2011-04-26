@@ -195,7 +195,8 @@ class CacheByFileHash
     }
 
     /**
-     * Get the full path of the object, based on the hash of the file
+     * Get the full path of the object based on the hash of the file,
+     * but does not guarantee on the existence of the file
      *
      * @param string $filename Full path to the file
      *
