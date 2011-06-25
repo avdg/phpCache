@@ -111,12 +111,14 @@ class CacheByFileHash
      * @param string $filename Full path to the file
      * @param string $data     Data to be stored
      *
-     * @return void
+     * @return string Hash of object
      */
     public function addCache($filename, $data)
     {
         $location = $this->getObjectLocation($filename);
         file_put_contents($location, $data);
+
+        return $location;
     }
 
     /**
