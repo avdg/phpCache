@@ -1,1 +1,24 @@
-Nothing to see here yet
+Small cache using hashing strategies to avoid cache corruptions.
+
+Basic usage of random stuff of CacheByFilehash:
+
+<?php
+// Setup
+$path = dirname(__FILE__) . '/cache/'; // Set cache directory
+mkdir($path);                          // If required
+
+require_once 'CacheByFilehash.php';
+$cache = new CacheByFileHash(array('cacheDirectory' => $path));
+
+// Action
+$file = dirname(__FILE__) . '/fileToCache.txt';
+$data = processFunction($file);                 // Expensive operation with fixed result on a file
+
+$object[] = $cache->addCache($file, $data);     // Add results to the cache and (optionally) get the object hash
+
+$cache->isCacheHit($file);                      // Do we have a cache hit?
+$cachedData = $cache->getCache($file);          // Fetch the results
+
+$cache->keep($objects);                         // We can keep the objects we want
+$cache->clear();                                // Or just throw all cache objects away
+?>
