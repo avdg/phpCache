@@ -41,7 +41,7 @@
  * @package   CacheByFileHash
  * @copyright Copyright (c) 2011 Anthony Van de Gejuchte
  */
-class CacheByFileHash
+class CacheByFilehash
 {
     /**
      * Cache location
