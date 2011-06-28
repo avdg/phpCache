@@ -8,7 +8,7 @@ $path = dirname(__FILE__) . '/cache/'; // Set cache directory
 mkdir($path);                          // If required
 
 require_once 'CacheByFilehash.php';
-$cache = new CacheByFileHash(array('cacheDirectory' => $path));
+$cache = new CacheByFilehash(array('cacheDirectory' => $path));
 
 // Action
 $file = dirname(__FILE__) . '/fileToCache.txt';
